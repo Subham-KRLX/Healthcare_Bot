@@ -372,5 +372,3 @@ This application is a demonstration project and should NOT be used for actual me
 For questions, issues, or contributions, please contact the project maintainer.
 
 ---
-
-**Built with ❤️ using Flask and Machine Learning**
