@@ -47,3 +47,10 @@ app.db
 
 # Logs
 *.log
+
+# Internal planning documents (not for GitHub)
+DAILY_PUSH_PLAN.md
+DEPLOYMENT_GUIDE.md
+QUICK_DEPLOY.md
+deployment.md
+Untitled-*
