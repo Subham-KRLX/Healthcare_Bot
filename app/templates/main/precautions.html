@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h3 class="mb-0"><i class="fas fa-shield-virus me-2"></i> General Health Precautions</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-light rounded-circle p-3 me-3">
+                                <i class="fas fa-hands-wash fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5>Hygiene First</h5>
+                                <p class="text-muted">Wash your hands frequently with soap and water for at least 20
+                                    seconds, especially after being in a public place.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-light rounded-circle p-3 me-3">
+                                <i class="fas fa-mask fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Wear a Mask</h5>
+                                <p class="text-muted">Wear a mask in crowded public settings where social distancing
+                                    measures are difficult to maintain.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-light rounded-circle p-3 me-3">
+                                <i class="fas fa-apple-alt fa-2x text-danger"></i>
+                            </div>
+                            <div>
+                                <h5>Healthy Diet</h5>
+                                <p class="text-muted">Eat a balanced diet rich in fruits, vegetables, and whole grains
+                                    to boost your immune system.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-light rounded-circle p-3 me-3">
+                                <i class="fas fa-running fa-2x text-warning"></i>
+                            </div>
+                            <div>
+                                <h5>Regular Exercise</h5>
+                                <p class="text-muted">Engage in regular physical activity to maintain a healthy weight
+                                    and reduce stress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Note:</strong> For specific precautions related to your symptoms, please use our <a
+                        href="{{ url_for('bot.chat') }}">Symptom Checker</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

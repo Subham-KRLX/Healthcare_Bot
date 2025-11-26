@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-8 text-center">
+        <div class="jumbotron">
+            <div class="mb-4">
+                <i class="fas fa-robot fa-5x text-white mb-3"></i>
+            </div>
+            <h1 class="display-4 mb-3">HealthBot AI</h1>
+            <p class="lead mb-4">Your intelligent companion for instant health insights and guidance.</p>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-4 mb-3">
+                    <a href="{{ url_for('bot.chat') }}" class="text-decoration-none">
+                        <div class="p-3 bg-white rounded-3 shadow-sm h-100 card-hover" style="opacity: 0.9;">
+                            <i class="fas fa-stethoscope fa-2x text-primary mb-2"></i>
+                            <h5 class="text-dark">Symptom Check</h5>
+                            <p class="text-muted small">AI-powered disease prediction</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <a href="{{ url_for('bot.find_doctors') }}" class="text-decoration-none">
+                        <div class="p-3 bg-white rounded-3 shadow-sm h-100 card-hover" style="opacity: 0.9;">
+                            <i class="fas fa-user-md fa-2x text-success mb-2"></i>
+                            <h5 class="text-dark">Find Doctors</h5>
+                            <p class="text-muted small">Locate specialists near you</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <a href="{{ url_for('main.precautions') }}" class="text-decoration-none">
+                        <div class="p-3 bg-white rounded-3 shadow-sm h-100 card-hover" style="opacity: 0.9;">
+                            <i class="fas fa-shield-virus fa-2x text-danger mb-2"></i>
+                            <h5 class="text-dark">Precautions</h5>
+                            <p class="text-muted small">Stay safe with expert advice</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                {% if current_user.is_authenticated %}
+                <a class="btn btn-primary btn-lg px-5 py-3" href="{{ url_for('bot.chat') }}" role="button">
+                    <i class="fas fa-comments me-2"></i> Start Chatting
+                </a>
+                {% else %}
+                <a class="btn btn-primary btn-lg px-5 py-3" href="{{ url_for('auth.register') }}" role="button">
+                    <i class="fas fa-rocket me-2"></i> Get Started
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
