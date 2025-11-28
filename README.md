@@ -345,6 +345,7 @@ This application is a demonstration project and should NOT be used for actual me
 - **Database**: SQLite by default; configure `DATABASE_URL` for PostgreSQL/MySQL
 - **Debug Mode**: Disable `debug=True` in production (`run.py`)
 
+
 ### Security Considerations
 - ⚠️ Change default admin credentials immediately
 - ⚠️ Use strong secret keys in production
