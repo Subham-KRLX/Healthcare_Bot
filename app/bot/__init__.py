@@ -4,6 +4,7 @@ import pickle
 import os
 import numpy as np
 import pandas as pd
+from app.security import sanitize_text_input
 
 bp = Blueprint('bot', __name__)
 
@@ -42,7 +43,10 @@ def chat():
     
     # API endpoint for chat
     data = request.get_json()
-    user_message = data.get('message', '').lower()
+    user_message = data.get('message', '')
+    
+    # Sanitize user input to prevent XSS attacks
+    user_message = sanitize_text_input(user_message, max_length=500).lower()
     
     if not model or not model_columns:
         return jsonify({'response': "I'm sorry, my brain (ML model) is currently offline. Please contact admin."})
