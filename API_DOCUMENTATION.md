@@ -60,6 +60,8 @@ Login to an existing account.
 }
 ```
 
+
+
 #### POST /api/auth/logout
 Logout from the current session.
 
